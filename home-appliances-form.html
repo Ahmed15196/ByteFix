@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Appliances Service Request - ByteFix Mobile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">ByteFix Mobile</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Appliances Service Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Request Home Appliances Service</h2>
+            <form action="#" method="post">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="address">Service Location Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" name="brand" required>
+                
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model" required>
+                
+                <label for="partNumber">Part Number:</label>
+                <input type="text" id="partNumber" name="partNumber" required>
+                
+                <label for="applianceType">Type of Appliance:</label>
+                <select id="applianceType" name="applianceType" required onchange="toggleOtherField()">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Washing Machine">Washing Machine</option>
+                    <option value="Dryer">Dryer</option>
+                    <option value="Microwave">Microwave</option>
+                    <option value="Oven">Oven</option>
+                    <option value="Dishwasher">Dishwasher</option>
+                    <option value="Stove">Stove</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <div id="otherApplianceContainer" style="display: none;">
+                    <label for="otherAppliance">Please specify:</label>
+                    <input type="text" id="otherAppliance" name="otherAppliance">
+                </div>
+                <label for="issue">Issue Description:</label>
+                <textarea id="issue" name="issue" rows="4" placeholder="Please provide details about the issue..."></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ByteFix Mobile. All Rights Reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleOtherField() {
+            var applianceType = document.getElementById('applianceType').value;
+            var otherApplianceContainer = document.getElementById('otherApplianceContainer');
+            
+            if (applianceType === 'Other') {
+                otherApplianceContainer.style.display = 'block';
+            } else {
+                otherApplianceContainer.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

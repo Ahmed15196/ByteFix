@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer & Laptop Service Request - ByteFix Mobile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="brand">ByteFix Mobile</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Computers & Laptops form -->
+    <section class="form-section">
+        <div class="container">
+            <h2>Request Computer or Laptop Service</h2>
+            <form action="#" method="post">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="address">Service Location Address:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="deviceType">Device Type:</label>
+                <select id="deviceType" name="deviceType" required>
+                    <option value="" disabled selected>Select Device Type</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Desktop">Desktop</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <div id="otherDeviceContainer" style="display: none;">
+                    <label for="otherDevice">Please specify:</label>
+                    <input type="text" id="otherDevice" name="otherDevice">
+                </div>
+                
+                <label for="brand">Brand:</label>
+                <input type="text" id="brand" name="brand">
+                
+                <label for="model">Model:</label>
+                <input type="text" id="model" name="model">
+                
+                <label for="serialNumber">Serial Number:</label>
+                <input type="text" id="serialNumber" name="serialNumber">
+                
+                <label for="issue">Issue Description:</label>
+                <textarea id="issue" name="issue" rows="4" placeholder="Please provide details about the issue..."></textarea>
+                
+                <label for="warrantyStatus">Warranty Status:</label>
+                <select id="warrantyStatus" name="warrantyStatus">
+                    <option value="" disabled selected>Select Warranty Status</option>
+                    <option value="Under Warranty">Under Warranty</option>
+                    <option value="Out of Warranty">Out of Warranty</option>
+                </select>
+                
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ByteFix Mobile. All Rights Reserved.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        function toggleOtherDeviceField() {
+            var deviceType = document.getElementById('deviceType').value;
+            var otherDeviceContainer = document.getElementById('otherDeviceContainer');
+            
+            if (deviceType === 'Other') {
+                otherDeviceContainer.style.display = 'block';
+            } else {
+                otherDeviceContainer.style.display = 'none';
+            }
+        }
+        
+        document.getElementById('deviceType').addEventListener('change', toggleOtherDeviceField);
+    </script>
+</body>
+</html>

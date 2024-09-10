@@ -1,89 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ByteFix offers expert repair services for Android phones, computers, and home appliances. Reliable, fast, and affordable.">
-    <meta name="keywords" content="Android phone repair, computer repair, home appliances repair, ByteFix">
-    <meta name="author" content="ByteFix">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#ffffff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <title>ByteFix Mobile</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-XXXXXXX-X');
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="ByteFix offers expert repair services for Android phones, computers, and home appliances. Reliable, fast, and affordable.">
+        <meta name="keywords" content="Android phone repair, computer repair, home appliances repair, ByteFix">
+        <meta name="author" content="ByteFix">
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="ByteFix - Expert Repair Services">
+        <meta property="og:description" content="Reliable repair services for Android phones, computers, and home appliances.">
+        <meta property="og:image" content="https://www.bytefix.com/images/hero-bg.jpg">
+        <meta property="og:url" content="https://www.bytefix.com">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="ByteFix - Expert Repair Services">
+        <meta name="twitter:description" content="Reliable repair services for Android phones, computers, and home appliances.">
+        <meta name="twitter:image" content="https://www.bytefix.com/images/hero-bg.jpg">
+        <meta name="twitter:site" content="@bytefix">
+        
+        <title>ByteFix Mobile</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-XXXXXXX-X');
+        </script>
+    </head>
+    
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a href="index.html" class="brand">ByteFix Mobile</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a class="navbar-brand" href="#">ByteFix Mobile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-slideshow">
-            <div class="slide" style="background-image: url('images/hero-bg.jpg');">
+            <div class="slide active" style="background-image: url('images/hero-bg.jpg');">
                 <div class="overlay">
                     <h1>ByteFix - Your Trusted Repair Partner</h1>
                     <p>We fix Android phones, computers, and home appliances with precision and care.</p>
-                    <a href="#services" class="cta-button">Explore Our Services</a>
+                    <a href="services.html" class="cta-button">Explore Our Services</a>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/2.jpg');">
                 <div class="overlay">
                     <h1>Expert Repairs at Your Doorstep</h1>
                     <p>Convenient, fast, and reliable repair services for all your needs.</p>
-                    <a href="#services" class="cta-button">Book a Service</a>
+                    <a href="services.html" class="cta-button">Book a Service</a>
                 </div>
             </div>
             <div class="slide" style="background-image: url('images/3.jpg');">
                 <div class="overlay">
                     <h1>Affordable Pricing, Quality Service</h1>
                     <p>Get the best repair services without breaking the bank.</p>
-                    <a href="#services" class="cta-button">Contact Us</a>
+                    <a href="contact.html" class="cta-button">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services" class="py-5">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <div class="service">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Android Phone Repairs</h3>
-                    <p>Fast and reliable software repairs for your Android phone.</p>
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Home Appliances</h3>
+                            <p class="card-text">Get your home appliances fixed with our expert services.</p>
+                            <a href="home-appliances-form.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Home Appliance Repairs</h3>
-                    <p>Efficient repairs for home appliances, excluding ACs and refrigerators.</p>
+                <!-- Repeat for other services -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Android Phone Service</h3>
+                            <p class="card-text">Need a fix for your Android phone?</p>
+                            <a href="android-phones-form.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="service">
-                    <i class="fas fa-tools"></i>
-                    <h3>Computer & Laptop Repairs</h3>
-                    <p>Comprehensive repair services for your computers and laptops.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Computer & Laptop Repairs</h3>
+                            <p class="card-text">We got you!</p>
+                            <a href="computers-laptops-form.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
                 </div>
+                
+                 
             </div>
         </div>
     </section>
@@ -125,6 +165,9 @@
         </div>
     </footer>
     
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your custom JS -->
     <script src="script.js"></script>
 </body>
 </html>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - ByteFix Mobile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -21,34 +23,48 @@
     </nav>
 
     <!-- Services Section -->
-    <section class="services">
+    <!-- Services Section -->
+    <section id="services" class="py-5">
         <div class="container">
-            <h2>Our Services</h2>
-            <div class="service-grid">
-                <!-- Home Appliances -->
-                <div class="service">
-                    <i class="fas fa-home"></i>
-                    <h3>Home Appliances</h3>
-                    <p>Get your home appliances fixed with our expert services. Whether it's a microwave, toaster, or washing machine, we've got you covered.</p>
-                    <a href="home-appliances-form.html" class="cta-button">Request Service</a>
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Home Appliances</h3>
+                            <p class="card-text">Get your home appliances fixed with our expert services.</p>
+                            <a href="home-appliances-form.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Computers & Laptops -->
-                <div class="service">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Computer & Laptop Repairs</h3>
-                    <p>Having issues with your computer or laptop? Our technicians can handle both hardware and software repairs at your location.</p>
-                    <a href="computers-laptops-form.html" class="cta-button">Request Service</a>
+                <!-- Repeat for other services -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Android Phone Service</h3>
+                            <p class="card-text">Need a fix for your Android phone?</p>
+                            <a href="android-phones-form.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
                 </div>
-                <!-- Android Phones -->
-                <div class="service">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Android Phone Repairs</h3>
-                    <p>Need a fix for your Android phone? We offer software repairs and troubleshooting to get your phone back in working condition.</p>
-                    <a href="android-phones-form.html" class="cta-button">Request Service</a>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-home fa-3x mb-3 text-primary"></i>
+                            <h3 class="card-title">Computer & Laptop Repairs</h3>
+                            <p class="card-text">We got you!</p>
+                            <a href="computers-laptops-form.html" class="btn btn-primary">Request Service</a>
+                        </div>
+                    </div>
                 </div>
+                
+                 
             </div>
         </div>
     </section>
+    
 
     
 

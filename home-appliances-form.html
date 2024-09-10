@@ -4,96 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Appliances Service Request - ByteFix Mobile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a href="index.html" class="brand">ByteFix Mobile</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <a class="navbar-brand" href="index.html">ByteFix Mobile</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Home Appliances Service Form Section -->
-    <section class="form-section">
+    <section class="form-section py-5">
         <div class="container">
-            <h2>Request Home Appliances Service</h2>
-            <form action="https://formspree.io/f/xvgpyldy" method="POST">
-
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
-                
-                <label for="phoneNumber">Phone Number:</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="address">Service Location Address:</label>
-                <input type="text" id="address" name="address" required>
-                
-                
-                <label for="brand">Brand:</label>
-                <input type="text" id="brand" name="brand" required>
-                
-                <label for="model">Model:</label>
-                <input type="text" id="model" name="model" required>
-                
-                <label for="partNumber">Part Number:</label>
-                <input type="text" id="partNumber" name="partNumber" required>
-                
-                <label for="applianceType">Type of Appliance:</label>
-                <select id="applianceType" name="applianceType" required onchange="toggleOtherField()">
-                    <option value="" disabled selected>Select an option</option>
-                    <option value="Washing Machine">Washing Machine</option>
-                    <option value="Dryer">Dryer</option>
-                    <option value="Microwave">Microwave</option>
-                    <option value="Oven">Oven</option>
-                    <option value="Dishwasher">Dishwasher</option>
-                    <option value="Stove">Stove</option>
-                    <option value="Other">Other</option>
-                </select>
-                
-                <div id="otherApplianceContainer" style="display: none;">
-                    <label for="otherAppliance">Please specify:</label>
-                    <input type="text" id="otherAppliance" name="otherAppliance">
+            <h2 class="text-center mb-4">Request Home Appliances Service</h2>
+            <form action="https://formspree.io/f/xvgpyldy" method="POST" class="needs-validation" novalidate>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="fullName" required>
+                        <div class="invalid-feedback">Please provide your full name.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                        <div class="invalid-feedback">Please provide a valid phone number.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">Please provide a valid email address.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="address" class="form-label">Service Location Address</label>
+                        <input type="text" class="form-control" id="address" name="address" required>
+                        <div class="invalid-feedback">Please provide the service location address.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="brand" class="form-label">Brand</label>
+                        <input type="text" class="form-control" id="brand" name="brand" required>
+                        <div class="invalid-feedback">Please provide the appliance brand.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="model" class="form-label">Model</label>
+                        <input type="text" class="form-control" id="model" name="model" required>
+                        <div class="invalid-feedback">Please provide the appliance model.</div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="partNumber" class="form-label">Part Number</label>
+                        <input type="text" class="form-control" id="partNumber" name="partNumber" required>
+                        <div class="invalid-feedback">Please provide the part number.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="applianceType" class="form-label">Type of Appliance</label>
+                        <select class="form-select" id="applianceType" name="applianceType" required onchange="toggleOtherField()">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Washing Machine">Washing Machine</option>
+                            <option value="Dryer">Dryer</option>
+                            <option value="Microwave">Microwave</option>
+                            <option value="Oven">Oven</option>
+                            <option value="Dishwasher">Dishwasher</option>
+                            <option value="Stove">Stove</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <div class="invalid-feedback">Please select an appliance type.</div>
+                    </div>
+                    <div class="col-md-6" id="otherApplianceContainer" style="display: none;">
+                        <label for="otherAppliance" class="form-label">Please specify</label>
+                        <input type="text" class="form-control" id="otherAppliance" name="otherAppliance">
+                    </div>
+                    <div class="col-12">
+                        <label for="issue" class="form-label">Issue Description</label>
+                        <textarea class="form-control" id="issue" name="issue" rows="4" placeholder="Please provide details about the issue..." required></textarea>
+                        <div class="invalid-feedback">Please describe the issue.</div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Submit Request</button>
+                    </div>
                 </div>
-                <label for="issue">Issue Description:</label>
-                <textarea id="issue" name="issue" rows="4" placeholder="Please provide details about the issue..."></textarea>
-                <button type="submit">Submit Request</button>
             </form>
         </div>
     </section>
     
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-light py-4 mt-5">
         <div class="container">
-            <p>&copy; 2024 ByteFix Mobile. All Rights Reserved.</p>
-            <ul class="social-links">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2024 ByteFix Mobile. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="text-muted"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
     <script>
         function toggleOtherField() {
             var applianceType = document.getElementById('applianceType').value;
             var otherApplianceContainer = document.getElementById('otherApplianceContainer');
-            
-            if (applianceType === 'Other') {
-                otherApplianceContainer.style.display = 'block';
-            } else {
-                otherApplianceContainer.style.display = 'none';
-            }
+            otherApplianceContainer.style.display = (applianceType === 'Other') ? 'block' : 'none';
         }
+
+        // Form validation
+        (function () {
+            'use strict'
+            var forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
     </script>
 </body>
 </html>
